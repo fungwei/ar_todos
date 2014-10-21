@@ -7,8 +7,8 @@ class CreateTasks < ActiveRecord::Migration
     # HINT: checkout ActiveRecord::Migration.create_table
     create_table :tasks do |t|
       t.string :description
-      t.datetime :created_at
-
+      t.datetime :started_at
+      t.datetime :completed_at
 
 
 
