@@ -13,6 +13,9 @@ class Task < ActiveRecord::Base
 
 	def self.complete!(id)
 	    temptask = self.find(id)
+	    if temptask.started_at == nil
+	    	temptask.started_at = Time.now
+	    end
 	    temptask.completed_at = Time.now
 	    temptask.save
   end
